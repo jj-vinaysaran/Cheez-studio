@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans', sans-serif; /* Corrected font-family declaration */
+}
+
+.home_bg{
+    height: 100vh;
+}
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    align-items: center;
+}
+
+.navbar.white {
+    background-color: white; /* Change background color on scroll */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual effect */
+}
+
+.navbar-logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-options {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    gap: 4.5rem;
+}
+
+.navbar-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5rem;
+}
+
+.social-icons {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Carousel styling */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 60%; /* Adjust height as needed */
+    /* background: green; */
+    z-index: 0; /* Ensure carousel is behind navbar */
+}
+
+.about-section {
+    height: 100%;
+    width: 100%;
+    background: red;
+}

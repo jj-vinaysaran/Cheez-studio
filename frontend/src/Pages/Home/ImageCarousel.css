@@ -1,0 +1,68 @@
+/* ImageCarousel.css */
+
+.carousel {
+    position: relative;
+    width: 100%; /* Take full width of its container */
+    height: 100%; /* Take full height of its container */
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    width: 100%; /* Ensure each slide takes full width */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for transform */
+  }
+  
+  .slide-container {
+    flex: 0 0 100%; /* Ensure each slide container takes full width */
+    overflow: hidden; /* Hide overflow to prevent layout issues */
+  }
+  
+  .slide-image {
+    width: 100%; /* Ensure image takes full width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover entire slide */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+  }
+  
+  .slide-image.flash {
+    animation: flash 1s infinite; /* Flash animation */
+  }
+  
+  @keyframes flash {
+    0% {
+      opacity: 1; /* Start with full opacity */
+    }
+    50% {
+      opacity: 0; /* Halfway through, fade out */
+    }
+    100% {
+      opacity: 1; /* End with full opacity */
+    }
+  }
+  
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for control buttons */
+  }
+  
+  .carousel-control.prev {
+    left: 10px;
+  }
+  
+  .carousel-control.next {
+    right: 10px;
+  }
+  
+  .carousel-control:hover {
+    opacity: 0.8; /* Adjust opacity on hover for visual feedback */
+  }
+  
